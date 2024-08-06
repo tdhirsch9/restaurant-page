@@ -1,20 +1,19 @@
+import Penguin from './penguin.png';
+import Background from './background.jpg'
 
 const Loadcontactspage = (() => {
 
     const contents = [
         "Contact Us",
-        "Mama Bear",
-        "Papa Bear"
+        "Big Penguin",
+        "Medium Penguin",
+        "Lil Penguin"
     ]
     
-    const daysOfWeek = [
-        'Monday: 11am - 10pm',
-        'Tuesday 11am - 10pm',
-        'Wednesday 11am - 10pm',
-        'Thursday 11am - 10pm',
-        'Friday 11am - 10pm',
-        'Saturday 11am - 12pm',
-        'Sunday 11am - 12pm',
+    const contactList = [
+        "",
+        "",
+        "",
     ]
 
     const content = document.getElementById("content");
@@ -28,9 +27,11 @@ const Loadcontactspage = (() => {
 
         if(i === 0){
             newContainer.textContent = '';
+            newContainer.classList.remove("sub-container-1")
+            newContainer.classList.add("contact-container-1")
             const restaurantName = document.createElement('h1')
             restaurantName.textContent = contents[0]
-            restaurantName.classList.add("restaurant-name")
+            restaurantName.classList.add("contact-us")
             newContainer.appendChild(restaurantName)
             for (let j = 0; j < 2; j++){
                 const penguinIcon = document.createElement('img');
@@ -39,27 +40,76 @@ const Loadcontactspage = (() => {
                 newContainer.appendChild(penguinIcon) 
             }
         } else if(i === 1){
+            newContainer.classList.remove("sub-container-2")
+            newContainer.classList.add("contact-container-2")
             newContainer.textContent = '';
-            const review = document.createElement('p')
-            review.textContent = contents[1]
-            review.classList.add("review")
-            newContainer.appendChild(review)
+            const employeeName = document.createElement('p')
+            employeeName.textContent = contents[1]
+            employeeName.classList.add("employee-name")
+            newContainer.appendChild(employeeName)
 
-            const reviewerName = document.createElement('p');
-            reviewerName.textContent = "- Lil Penguin";
-            reviewerName.classList.add("reviewer-name")
-            newContainer.appendChild(reviewerName)
+            const employeeTitle = document.createElement('p')
+            employeeTitle.textContent = "Chef"
+            employeeTitle.classList.add("employee-title", "employee-info")
+            newContainer.appendChild(employeeTitle)
+
+            const employeeNumber = document.createElement('p')
+            employeeNumber.textContent = "133-333-3337"
+            employeeNumber.classList.add("employee-number", "employee-info")
+            newContainer.appendChild(employeeNumber)
+
+            const employeeEmail = document.createElement('p')
+            employeeEmail.textContent = "definitelyRealEmail@arctic.com"
+            employeeEmail.classList.add("employee-email", "employee-info")
+            newContainer.appendChild(employeeEmail)
+
         }  else if(i === 2){
-            const businessHoursList = document.createElement('ul');
-            businessHoursList.classList.add("business-hours-list")
-            newContainer.appendChild(businessHoursList)
-            for (let d = 0; d < 7; d++){
-            const days = document.createElement("li")
-            days.classList.add("days")
-            days.textContent = daysOfWeek[d]
-            businessHoursList.appendChild(days)
-            }
-        }  
+            newContainer.classList.remove("sub-container-3")
+            newContainer.classList.add("contact-container-3")
+            newContainer.textContent = '';
+            const employeeName = document.createElement('p')
+            employeeName.textContent = contents[2]
+            employeeName.classList.add("employee-name")
+            newContainer.appendChild(employeeName)
+
+            const employeeTitle = document.createElement('p')
+            employeeTitle.textContent = "Manager"
+            employeeTitle.classList.add("employee-title", "employee-info")
+            newContainer.appendChild(employeeTitle)
+
+            const employeeNumber = document.createElement('p')
+            employeeNumber.textContent = "133-333-3336"
+            employeeNumber.classList.add("employee-number", "employee-info")
+            newContainer.appendChild(employeeNumber)
+
+            const employeeEmail = document.createElement('p')
+            employeeEmail.textContent = "veryRealEmail@arctic.com"
+            employeeEmail.classList.add("employee-email", "employee-info")
+            newContainer.appendChild(employeeEmail)
+        }    else if(i === 3){
+            newContainer.classList.remove("sub-container-4")
+            newContainer.classList.add("contact-container-4")
+            newContainer.textContent = '';
+            const employeeName = document.createElement('p')
+            employeeName.textContent = contents[3]
+            employeeName.classList.add("employee-name")
+            newContainer.appendChild(employeeName)
+
+            const employeeTitle = document.createElement('p')
+            employeeTitle.textContent = "Waiter"
+            employeeTitle.classList.add("employee-title", "employee-info")
+            newContainer.appendChild(employeeTitle)
+
+            const employeeNumber = document.createElement('p')
+            employeeNumber.textContent = "133-333-3335"
+            employeeNumber.classList.add("employee-number", "employee-info")
+            newContainer.appendChild(employeeNumber)
+
+            const employeeEmail = document.createElement('p')
+            employeeEmail.textContent = "realPenguinEmail@arctic.com"
+            employeeEmail.classList.add("employee-email", "employee-info")
+            newContainer.appendChild(employeeEmail)
+        } 
     }
 
 

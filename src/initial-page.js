@@ -1,5 +1,6 @@
 import Penguin from './penguin.png';
-import Background from './snowflake-background.jpeg'
+import Background from './background.jpg'
+import Penguinglacier from './pole.png'
 
 const Initializepage = (() => {
 
@@ -48,8 +49,13 @@ const Initializepage = (() => {
             review.classList.add("review")
             newContainer.appendChild(review)
 
+            const glacier = document.createElement('img')
+            glacier.src = Penguinglacier
+            glacier.classList.add('glacier-image')
+            newContainer.appendChild(glacier)
+
             const reviewerName = document.createElement('p');
-            reviewerName.textContent = "- Lil Penguin";
+            reviewerName.textContent = "- Arctic Weekly";
             reviewerName.classList.add("reviewer-name")
             newContainer.appendChild(reviewerName)
         }  else if(i === 2){
